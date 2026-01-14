@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -37,7 +38,16 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
+.custom-scrollbar {
+  min-width: 399px;
+  margin-left: 32px;
+  margin-top: 20px;
+}
+
+.content__details {
+  margin-bottom: 38px;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
@@ -48,4 +58,230 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #D9D9D9;
+}
+
+.title {
+  font-family: Oswald;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 75px;
+  line-height: 94%;
+  padding-left: 30px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__video-card-description-container {
+  min-width: 196px;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.content__card-link .content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.content__card-link .content__video-card-description {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 136px;
+}
+
+.result {
+  margin-top: 30px;
+}
+
+.result__video {
+  min-width: 711px;
+  min-height: 386px;
+
+}
+
+.result__video-container {
+  position: relative;
+  margin-top: 43px;
+  margin-left: 29px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.search-form__fieldset {
+  display: grid;
+  gap: 5px;
+  border: none;
+}
+
+.search-form__fieldset:nth-of-type(1) {
+  margin-left: 30px;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__label {
+  display: flex;
+  gap: 5px;
+}
+
+.search-form__label-text {
+  cursor: pointer;
+}
+
+.search-form__label:has(:focus-visible) {
+  padding: 2px;
+  border: 1px solid #FFF;
+}
+
+.search-form__checkbox-list .search-form__label:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.search-form__textfield {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  inline-size: 225px;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.not-decorated-search-form:hover {
+  text-decoration: none;
+}
+
+.search-form__textfield:active {
+  border: 1px solid #FFF;
+}
+
+.search-form__pseudo-checkbox {
+  inline-size: 19px;
+  block-size: 19px;
+  border: 1px solid #FFF;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  content: '';
+  display: block;
+  background-color: #FFF;
+  inline-size: 15px;
+  block-size: 15px;
+  margin: 1px;
+}
+
+.search-form__label:has(:focus-visible) {
+  padding: 2px;
+  border: 1px solid #FFF;
+}
+
+.more-button {
+  min-width: 390px;
+  min-height: 34px;
+  margin-top: 30px;
+}
+
+.button {
+  cursor: pointer;
+  height: 100%;
+  background-color: transparent;
+  color: #FFF;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  border: 1px solid #FFF;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.search-form__submit-button {
+  padding: 6px 73px;
+}
+
+.search-form__submit-button:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.content__list-container {
+  overflow: auto;
+  max-height: 298px;
+  max-width: 399px;
+}
+
+.content__video-card {
+  display: flex;
+}
+
+.content__video-card:active {
+  background-color: #545050;
+}
+
+.content__video-card-title {
+  max-width: 196px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
 }
