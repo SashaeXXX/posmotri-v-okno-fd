@@ -72,15 +72,17 @@ ol {
 .content {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  margin-top: 136px;
+  align-items: center;
 }
 
 .content__details {
-  margin-bottom: 38px;
+  min-height: 534px;
+  align-items: flex-start;
+  margin-bottom: 25px;
 }
 
 .content__list-container {
+  position: relative;
   overflow-y: auto;
   max-height: 298px;
   max-width: 399px;
@@ -99,7 +101,12 @@ ol {
 }
 
 .content__card-link:hover {
-  background-color: rgba(84, 80, 80, 0.6);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.content__card-link:active {
+  background-color: #545050;
 }
 
 .content__card-link_current {
@@ -142,10 +149,6 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-}
-
-.result {
-  margin-top: 30px;
 }
 
 .result__video {
